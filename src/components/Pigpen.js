@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PigData from "../porkers_data";
 import PigCard from "./PigCard";
 import Filter from "./Filter";
+import Pigform from './Pigform';
 
 class Pigpen extends Component {
   state = {
