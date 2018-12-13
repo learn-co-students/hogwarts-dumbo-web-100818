@@ -55,6 +55,10 @@ class Pigpen extends Component {
     });
   }
 
+  handleNewPig=(pig)=>{
+    console.log(pig)
+  }
+
   render() {
     let pigCardList = this.state.pigData.map(pig => {
       return (
@@ -64,6 +68,7 @@ class Pigpen extends Component {
 
     return (
       <div className="ui grid container">
+      <Pigform submitPig={this.handleNewPig}/>
         <Filter handleSelectedValue={this.filterPigs} />
         {pigCardList}
       </div>
