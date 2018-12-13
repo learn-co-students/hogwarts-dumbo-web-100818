@@ -37,7 +37,7 @@ class PigIndex extends Component {
   const pigA = a.name.toUpperCase();
   const pigB = b.name.toUpperCase();
   let comparison = 0;
-  if (this.state.name == "forward") {
+  if (this.state.name === "forward") {
     (pigA < pigB) ? comparison = 1 : comparison = -1
     this.setState({
       name: "reverse"

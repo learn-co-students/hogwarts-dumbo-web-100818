@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Pig extends Component {
 
   state = {
-    imgUrl: `../hog-imgs2/${this.props.hog.name.toLowerCase()}.jpg`,
+    imgUrl: `../hog-imgs2/${this.props.hog.name.toLowerCase()}`,
     pigName: ''
   }
 
@@ -19,7 +19,7 @@ class Pig extends Component {
       <div className="pigTile"
         onClick={() => this.props.showPiggy(this.props.hog.name)}>
       <h3>{this.props.hog.name}</h3>
-      <img src={process.env.PUBLIC_URL + '../hog-imgs2/' + this.props.hog.name + '.jpg' }/>
+      <img alt={this.props.hog.name} src={process.env.PUBLIC_URL + '../hog-imgs2/' + this.props.hog.name.replace(" ", "_").replace(" ", "_").toLowerCase() + '.jpg' }/>
     { (this.props.hog.name === this.props.pigName) ?
       <div>
       <p>Specialty: {this.props.hog.specialty}</p>
